@@ -1,0 +1,52 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import { CDN_URL } from '~/config'
+
+const { meta, isBlog } = Astro.props
+
+// markdown 样式 css
+const gfmCssPath = `${CDN_URL}/static/styles/gfm.css`
+---
+
+<!DOCTYPE html>
+<html lang="en" class="motion-safe:scroll-smooth text-base">
+  <head>
+    <BaseHead {...meta} />
+    {
+      isBlog && (
+        <head>
+          <link rel="stylesheet" href={gfmCssPath} />
+        </head>
+      )
+    }
+  </head>
+  <body class="antialiased text-gray-900 tracking-tight bg-white">
+    <slot />
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+      #toggle-menu path {
+        @apply transition;
+      }
+      #toggle-menu.expanded g > path:first-child {
+        @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+      }
+
+      #toggle-menu.expanded g > path:last-child {
+        @apply rotate-45 translate-y-[-8px] translate-x-[14px];
+      }
+    </style>
+    <script is:inline>
+      window.onload = function () {
+        const menuIcon = document.querySelector('#toggle-menu')
+        menuIcon.addEventListener('click', () => {
+          menuIcon.classList.toggle('expanded')
+          document.body.classList.toggle('overflow-hidden')
+          document.getElementById('header')?.classList.toggle('h-screen')
+          document.querySelector('#header nav')?.classList.toggle('hidden')
+        })
+      }
+    </script>
+  </body>
+</html>

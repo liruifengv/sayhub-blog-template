@@ -1,0 +1,34 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import { CDN_URL } from '~/config'
+
+export interface Props {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<link rel="shortcut icon" href={`${CDN_URL}/logo.png`} />
+
+<script>
+  var _hmt = _hmt || []
+  ;(function () {
+    var hm = document.createElement('script')
+    // Your baidu analytics code here
+    hm.src = 'xxxxx'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode?.insertBefore(hm, s)
+  })()
+</script>
