@@ -8,7 +8,7 @@ const { meta, isBlog } = Astro.props
 
 <Layout {meta} isBlog={isBlog}>
   <Header />
-  <main>
+  <main class="flex justify-center">
     <slot />
   </main>
   <Footer />
