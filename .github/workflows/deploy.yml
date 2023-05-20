@@ -8,7 +8,7 @@ permissions:
   pages: write
   id-token: write
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -23,8 +23,14 @@ jobs:
 
       - name: Build 🔧
         run: pnpm run build:ci
-      - name: Deploy 🚀
-        uses: JamesIves/Github-pages-deploy-action@releases/v4
-        with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          folder: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
