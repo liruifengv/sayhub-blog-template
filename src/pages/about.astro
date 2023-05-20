@@ -19,14 +19,14 @@ const meta = {
 ---
 
 <PageLayout {meta} isBlog={true}>
-  <div class='mx-4 mt-8 max-w-5xl bg-white rounded-lg'>
-    <section class="px-6 py-6">
+  <div class='mx-4 mt-8 w-full md:w-[60%] bg-white rounded-lg'>
+    <section class="px-6 py-6 mx-auto max-w-3xl">
       <header>
         <h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
           {title}
         </h1>
       </header>
-      <article class="container mx-auto max-w-3xl markdown-body">
+      <article class="container markdown-body">
         {image && <Picture src={image} alt="descriptive text" widths={[400, 900]} aspectRatio="16:9" class="rounded-lg"/>}
         <div class="mt-6">
           <Content />

@@ -27,9 +27,9 @@ const showRightRecent = showRecent !== false
 
 <PageLayout {meta} isBlog={true}>
   <div
-    class='mx-4 max-w-5xl bg-white mt-8 rounded-lg'
+    class='mx-4 mt-8 w-full md:w-[60%] bg-white rounded-lg'
   >
-    <section class="px-6 py-6">
+    <section class="px-6 py-6 mx-auto max-w-3xl">
       <header>
         <h1 class="text-center text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
           {title}
@@ -42,8 +42,8 @@ const showRightRecent = showRecent !== false
           )
         }
       </header>
-    {image && <Picture class="w-full rounded-lg" src={image} alt="descriptive text" widths={[400, 900]} aspectRatio="16:9" />}
       <article class="container markdown-body">
+        {image && <Picture class="w-full rounded-lg" src={image} alt="descriptive text" widths={[400, 900]} aspectRatio="16:9" />}
         <div class="mt-6">
           <slot />
         </div>
