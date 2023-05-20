@@ -23,6 +23,11 @@ jobs:
 
       - name: Build 🔧
         run: pnpm run build:ci
+        
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "/dist/"
 
   deploy:
     needs: build
