@@ -22,11 +22,11 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
 ---
 
 <Layout {meta}>
-  <div class="min-w-[80%] flex justify-center mx-4 mt-8">
+  <div class="min-w-[80%] flex justify-center">
     <ul>
       {
         posts.map((post) => (
-          <li class="mb-8">
+          <li class="mb-4">
             <PostItem post={post.data} url={`${basename}blog/${post.slug}/`} />
           </li>
         ))

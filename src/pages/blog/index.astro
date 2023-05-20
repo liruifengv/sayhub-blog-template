@@ -15,15 +15,13 @@ const meta = {
 ---
 
 <PageLayout {meta}>
-  <section class="mx-4 mt-8">
-    <ul>
-      {
-        posts.map((post) => (
-          <li class="mb-8">
-            <PostItem post={post.data} url={`${basename}blog/${post.slug}/`} />
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+  <ul>
+    {
+      posts.map((post) => (
+        <li class="mb-4">
+          <PostItem post={post.data} url={`${basename}blog/${post.slug}/`} />
+        </li>
+      ))
+    }
+  </ul>
 </PageLayout>
