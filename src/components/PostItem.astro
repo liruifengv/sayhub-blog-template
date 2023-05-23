@@ -37,11 +37,11 @@ const { post, url } = Astro.props
   }
   <div class="py-6 px-6">
     <div class="text-xl font-heading font-bold">
-      <a class="hover:text-primary-600 transition ease-in duration-200" href={url}>
+      <a class="hover:text-primary-600 transition ease-in duration-200 line-clamp-1 text-ellipsis" href={url}>
         {post.title}
       </a>
     </div>
-    <div class="mt-2 font-normal">{post.description}</div>
+    <div class="mt-2 font-normal line-clamp-2 text-ellipsis">{post.description}</div>
     <div class="mt-2 font-light">发表日期：{post.pubDate}</div>
     {post.tags?.length > 0 && <PostTags tags={post.tags} class="mt-2" />}
   </div>
