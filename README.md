@@ -2,9 +2,12 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/liruifengv/sayhub-blog-template/pulls)
 
-使用 Astro 构建的博客模板，快速搭建拥有漂亮主题的个人博客 / A blog site template with a beautiful theme built with Astro
+使用 Astro 构建的博客模板，快速搭建拥有漂亮主题的个人博客。 / A blog site template with a beautiful theme built with Astro.
 
-> 本项目是由我的个人博客项目孵化而来：https://github.com/liruifengv/sayhub
+**在线预览**：https://liruifengv.github.io/sayhub-blog-template/
+
+> 本项目是由我的个人博客项目 [SayHub](https://github.com/liruifengv/sayhub) 孵化而来。
+
 
 ## Features
 
