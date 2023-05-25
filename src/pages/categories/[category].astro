@@ -7,8 +7,6 @@ const basename = import.meta.env.BASE_URL
 
 const { category } = Astro.params
 
-console.log(category)
-
 const posts = (await getCollection('blog'))
   .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf())
   .filter((post) => {
