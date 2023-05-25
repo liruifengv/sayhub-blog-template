@@ -18,12 +18,13 @@
 - [x] 生成项目站点地图( @astrojs/sitemap )
 - [x] 优秀的 [Lighthouse](https://web.dev/measure/) 和 [PageSpeed Insights](https://pagespeed.web.dev/) 报告分数
 - [x] 生成 rss.xml 支持 RSS 订阅
+- [x] 文章标签
+- [x] 文章分类
 
 [如何用 RSS 订阅？](https://zhuanlan.zhihu.com/p/55026716)
 
 ## TODO
 
-- [ ] 分类功能
 - [ ] 分页功能
 - [ ] 归档功能
 - [ ] 文章 TOC
