@@ -1,9 +1,9 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
-import { getCollection } from 'astro:content'
+import rss, { pagesGlobToRssItems } from "@astrojs/rss";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import { getCollection } from "astro:content";
 
 export const get = async () => {
-  const blog = await getCollection('blog')
+  const blog = await getCollection("blog");
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
@@ -16,5 +16,5 @@ export const get = async () => {
       tags: post.data.tags,
       link: `/blog/${post.slug}/`,
     })),
-  })
-}
+  });
+};
