@@ -30,7 +30,7 @@ const meta = {
     {
       categories &&  Array.isArray(categories) && categories.map((category) => 
         (
-          <div class="w-full md:w-[50%] my-2 md:mx-2 py-4 px-4 box-border bg-white rounded-lg flex flex-col">
+          <div class="w-full md:w-[50%] my-2 md:mx-2 py-4 px-4 box-border bg-white rounded-lg flex flex-col dark:text-white dark:bg-[#24272d] border dark:border-[#353840]">
             <div class="flex items-center">
               <div class="text-xl">{category}</div>
               <div class="text-sm mx-2 text-gray-500">共 {getCountByCategory(category)} 篇</div>

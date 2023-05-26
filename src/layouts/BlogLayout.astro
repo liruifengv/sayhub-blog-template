@@ -25,7 +25,7 @@ const meta = {
 
 <PageLayout {meta} isBlog={true}>
   <div
-    class='w-full md:w-[80%] xl:w-[60%] bg-white rounded-lg'
+    class='w-full md:w-[80%] xl:w-[60%] bg-white rounded-lg dark:text-white dark:bg-[#24272d] border dark:border-[#353840]'
   >
     <section class="px-6 py-6 mx-auto max-w-3xl">
       <header>
@@ -49,7 +49,7 @@ const meta = {
           }
         </div>
       </header>
-      <article class="container markdown-body">
+      <article class="container markdown-body dark:text-white dark:bg-[#24272d]">
         {image && <Picture class="w-full rounded-lg" src={image} alt="descriptive text" widths={[400, 900]} aspectRatio="16:9" />}
         <div class="mt-6">
           <slot />
