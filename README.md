@@ -39,6 +39,9 @@ built with Astro.
 ## Contributing
 
 欢迎贡献你的代码，请 Fork 本项目后提交 PR。
+目前需要的贡献有：
+- 优化代码，目前代码耦合比较严重，需要重构
+- 样式比较丑，急需有 UI 设计技能的同学帮助
 
 ## License
 
