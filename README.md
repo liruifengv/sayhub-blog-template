@@ -1,6 +1,7 @@
 # Sayhub Blog Template
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/liruifengv/sayhub-blog-template/pulls)
+[![Built with Astro](https://astro.badg.es/v1/built-with-astro/tiny.svg)](https://astro.build)
 
 使用 Astro 构建的博客模板，快速搭建拥有漂亮主题的个人博客。 / A blog site template with a beautiful theme
 built with Astro.
